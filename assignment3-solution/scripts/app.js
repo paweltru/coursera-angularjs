@@ -27,7 +27,7 @@ function FoundItemsDirectiveController() {
   var list = this;
 
   list.isEmptyList = function () {
-    return (list.found.length > 0) ? false : true;
+    return (angular.isDefined(list.found) && list.found.length > 0) ? false : true;
   }
 }
 
