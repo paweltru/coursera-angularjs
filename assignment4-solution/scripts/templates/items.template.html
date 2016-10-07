@@ -1,0 +1,9 @@
+<ul class="breadcrumb">
+  <li><a ui-sref="home">Home</a></li>
+  <li><a ui-sref="categories">Categories</a></li>
+  <li class="active">{{itemList.items.data.category.name}}</li>
+</ul>
+
+<h3>{{itemList.items.data.category.name}}</h3>
+<h4>{{itemList.items.data.category.special_instructions}}</h4>
+<item-list items="itemList.items.data.menu_items"></item-list>
