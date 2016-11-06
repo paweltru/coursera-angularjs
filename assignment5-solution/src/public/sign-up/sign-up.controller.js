@@ -8,7 +8,7 @@ SignUpController.$inject = ['MenuService', 'UserService'];
 function SignUpController(MenuService, UserService) {
   var $ctrl = this;
   $ctrl.user = {};
-
+  $ctrl.menuItemExist = true;
   $ctrl.signUp = function () {
     MenuService.getMenuItem($ctrl.user.dish).then(function (result) {
           $ctrl.msg = result.status;
