@@ -1,0 +1,25 @@
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center">My Info</h2>
+  <div id="info" ng-if="!myInfoCtrl.notSigned">
+    <table class="table table-condensed">
+      <tbody>
+      <tr>
+        <td>First name:</td><td>{{ myInfoCtrl.user.firstname}}</td>
+      </tr>
+      <tr>
+        <td>Last name:</td><td>{{ myInfoCtrl.user.lastname}}</td>
+      </tr>
+      <tr>
+        <td>Email:</td><td>{{ myInfoCtrl.user.email}}</td>
+      </tr>
+      <tr>
+        <td>Phone:</td><td>{{ myInfoCtrl.user.phone}}</td>
+      </tr>
+    </table>
+    Favourite dish:<br/>
+    <menu-item menu-item="myInfoCtrl.menuItem"></menu-item>
+  </div>
+  <div ng-if="myInfoCtrl.notSigned">
+    Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+  </div>
+</div>
