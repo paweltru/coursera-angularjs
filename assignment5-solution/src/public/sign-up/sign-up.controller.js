@@ -15,8 +15,9 @@ function SignUpController(MenuService, UserService) {
           if(result.status === 200) {
             UserService.saveUser($ctrl.user);
             $ctrl.msg = 'Your information has been saved.';
+            $ctrl.menuItemExist = true;
           } else {
-            $ctrl.msg = 'No such menu number exists.';
+            $ctrl.menuItemExist = false;
           }
         });
   }
