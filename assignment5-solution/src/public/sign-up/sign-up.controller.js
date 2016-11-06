@@ -11,7 +11,6 @@ function SignUpController(MenuService, UserService) {
   $ctrl.menuItemExist = true;
   $ctrl.signUp = function () {
     MenuService.getMenuItem($ctrl.user.dish).then(function (result) {
-          $ctrl.msg = result.status;
           if(result.status === 200) {
             UserService.saveUser($ctrl.user);
             $ctrl.msg = 'Your information has been saved.';
